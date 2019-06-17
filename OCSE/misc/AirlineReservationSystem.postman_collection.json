@@ -1,0 +1,364 @@
+{
+	"info": {
+		"name": "AirlineReservationSystem",
+		"_postman_id": "94b2e9ed-93db-0452-9975-e650abdf8af6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "flightDetails",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"flightName\":\"Indigo\",\n\"depCity\":\"Hyderabad\",\n\"arrCity\" : \"dubai\",\n\"depDate\": \"26-Apr-2019\",\n\"arrDate\": \"27-Apr-2019\",\n\"depTime\" : \"12:30AM\",\n\"arrTime\" : \"1:00AM\",\n\"businessSeats\" :\"200\",\n\"economySeats\"    : \"120\",\n\"firstclassSeats\": \"250\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8084/flightDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"flightDetails"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "flightDetails",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"flightName\":\"Indigo\",\n\"depCity\":\"Hyderabad\",\n\"arrCity\" : \"dubai\",\n\"depDate\": \"26-Apr-2019\",\n\"arrDate\": \"27-Apr-2019\",\n\"depTime\" : \"12:30AM\",\n\"arrTime\" : \"1:00AM\",\n\"businessSeats\" :\"200\",\n\"economySeats\"    : \"120\",\n\"firstclassSeats\": \"250\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8084/flightDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"flightDetails"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "flightDetail/filter/depDate/arrCity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8084/flightDetail/filter?depDate=26-Apr-2019&arrCity=dubai",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"flightDetail",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "depDate",
+							"value": "26-Apr-2019",
+							"equals": true
+						},
+						{
+							"key": "arrCity",
+							"value": "dubai",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "flightDetails/flightId",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"flightId\": 100011,\n        \"flightName\": \"jetways\",\n        \"depCity\": \"chennai\",\n        \"arrCity\": \"banglore\",\n        \"depDate\": \"17-Apr-2019\",\n        \"arrDate\": \"18-Apr-2019\",\n        \"depTime\": \"11:30AM\",\n        \"arrTime\": \"12:00PM\",\n        \"businessSeats\": 120,\n        \"economySeats\": 300,\n        \"firstclassSeats\": 200\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8084/flightDetails/100011",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"flightDetails",
+						"100011"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "bookings",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"custEmail\":\"asha@gmail.com\",\r\n\"numberPassengers\":200,\r\n\"classType\":\"businessclass\",\r\n\"totalFare\":3560,\r\n\"seatNumbers\":\"A2\",\r\n\"creditcardInfo\":\"4585989654654\",\r\n\"srcCity\":\"Hyderabad\",\r\n\"destCity\":\"banglore\",\r\n\"flights\":\r\n{\r\n\t\"flightId\":100012\r\n}\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8084/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"bookings"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "flightDetails/bookingId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8084/flightDetails/10507",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"flightDetails",
+						"10507"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8084/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"bookings"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "bookings/bookingId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8084/bookings/10506",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"bookings",
+						"10506"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "bookings/flightId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8084/bookings/100012",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"bookings",
+						"100012"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "passengers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"custId\":101,\r\n\"custName\":\"Ramya\",\r\n\"custAge\":22,\r\n\"seatNumber\":\"A3\",\r\n\"mobileNumber\":\"9546534654\",\r\n\"flight\":\r\n{\r\n\t\"flightId\":100014\r\n}\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8084/passengers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"passengers"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "passengers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8084/passengers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"passengers"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "passengers/ flightId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8084/passengers/ 100014",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"passengers",
+						" 100014"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "passengers/flightId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8084/occupancy/100014",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"occupancy",
+						"100014"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "occupancy/flightId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8084/occupancy/100014",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"occupancy",
+						"100014"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

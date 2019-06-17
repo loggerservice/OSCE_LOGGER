@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "fc4942a4-1e62-4318-9001-ea7760fb6772",
+		"name": "osce_test1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:9200/osce-test/logs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"application\": \"OSCE-TEST-APPLICATION\",\r\n    \"module\": \"Flightservice\",\r\n    \"operation\": \"Flightdetails\",\r\n    \"timeStamp\": \"tue 12-08-2019 12:40\",\r\n    \"messageType\": \"REQUEST\",\r\n    \"requestParams\": [\r\n        {\r\n            \"flightId\":0,\"flightName\":\"QutarAirways\",\"depCity\":\"Delhi\",\"arrCity\":\"Banglore\",\"depDate\":\"27-Apr-2019\",\"arrDate\":\"28-Apr-2019\",\"depTime\":\"12:30AM\",\"arrTime\":\"1:00AM\",\"businessSeats\":120,\"economySeats\":100,\"firstclassSeats\":250\r\n        }\r\n    ],\r\n    \"processId\": \"1222\",\r\n    \"userId\": \"9090\",\r\n    \"serverName\": \"localserver\",\r\n    \"flightId\":100015,\r\n\"flightName\":\"Emirates\",\r\n\"depCity\":\"chennai\",\r\n\"arrCity\" : \"Mumbai\",\r\n\"depDate\": \"26-Apr-2019\",\r\n\"arrDate\": \"27-Apr-2019\",\r\n\"depTime\" : \"12:30AM\",\r\n\"arrTime\" : \"1:00AM\",\r\n\"businessSeats\" :\"200\",\r\n\"economySeats\"    : \"120\",\r\n\"firstclassSeats\": \"250\",\r\n\r\n\"custEmail\":\"sai@gmail.com\",\r\n\"numberPassengers\":20,\r\n\"classType\":\"firstclass\",\r\n\"totalFare\":3560,\r\n\"seatNumbers\":\"A2 , A4\",\r\n\"creditcardInfo\":\"123456789\",\r\n\"srcCity\":\"bangalore\",\r\n\"destCity\":\"hyderabad\",\r\n\r\n\"custId\":102,\r\n\"custName\":\"haru\",\r\n\"custAge\":22,\r\n\"seatNumber\":\"A2\",\r\n\"mobileNumber\":\"9546534654\",\r\n\"exceptionCode\": 404,\r\n    \"exceptionDetails\": \"FileNotFoundException\",\r\n    \"stackTrace\": \"at java.io.FileInputStream.open(Native Method)  at java.io.FileInputStream.<init>(FileInputStream.java:106)\",\r\n    \"httpStatusCode\": 404,\r\n    \"elapsedTime\":150\r\n  \r\n\r\n}"
+				},
+				"url": {
+					"raw": "localhost:9200/osce-test2/logs",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"osce-test2",
+						"logs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
